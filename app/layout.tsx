@@ -8,8 +8,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'HancockTrades | 1-on-1 CRT Trading Mentorship',
-  description: 'Apply for 1-on-1 CRT Trading Mentorship with Hancock. Learn to trade with structure, timing, and clarity using ICT principles simplified through CRT.',
+  title: "Hancock's 1-on-1 CRT Trading Mentorship",
+  description: "Apply for Hancock's exclusive 1-on-1 CRT Trading Mentorship. Learn to trade with structure, timing, and clarity using ICT principles simplified through CRT.",
   generator: 'v0.app',
   icons: {
     icon: '/hancock-logo.png',

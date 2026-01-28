@@ -13,7 +13,7 @@ export function HeroSection() {
         For Serious Beginner–Intermediate Traders
       </span>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-foreground max-w-4xl leading-tight text-balance">
-        Apply For 1-on-1 CRT Trading Mentorship
+        Apply For Hancock's 1-on-1 CRT Trading Mentorship
       </h1>
       <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-pretty">
         Learn how to trade with structure, timing, and clarity using ICT principles simplified through CRT—without overcomplicating your charts or chasing endless strategies.
