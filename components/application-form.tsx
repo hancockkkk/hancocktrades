@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 export function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -28,9 +29,29 @@ export function ApplicationForm() {
     whyGoodCandidate: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+
+    try {
+      const response = await fetch("https://formspree.io/f/mojdoylr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        alert("There was an error submitting your application. Please try again.")
+        setSubmitting(false)
+      }
+    } catch (error) {
+      alert("There was an error submitting your application. Please try again.")
+      setSubmitting(false)
+    }
   }
 
   const updateField = (field: string, value: string) => {
@@ -309,9 +330,10 @@ export function ApplicationForm() {
 
           <button
             type="submit"
-            className="w-full py-4 bg-primary text-primary-foreground font-medium rounded-md hover:opacity-90 transition-opacity"
+            disabled={submitting}
+            className="w-full py-4 bg-primary text-primary-foreground font-medium rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit Application
+            {submitting ? "Submitting..." : "Submit Application"}
           </button>
         </form>
       </div>
