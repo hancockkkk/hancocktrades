@@ -4,6 +4,7 @@ import { FramingSection } from "@/components/framing-section"
 import { WhoSection } from "@/components/who-section"
 import { CurriculumSection } from "@/components/curriculum-section"
 import { ProcessSection } from "@/components/process-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import { ApplicationForm } from "@/components/application-form"
 import { Footer } from "@/components/footer"
 
@@ -17,6 +18,7 @@ export default function Home() {
         <WhoSection />
         <CurriculumSection />
         <ProcessSection />
+        <TestimonialsSection />
         <ApplicationForm />
         <Footer />
       </div>
